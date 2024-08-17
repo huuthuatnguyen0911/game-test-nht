@@ -75,6 +75,8 @@ function App() {
     }
   };
 
+  const disableButton = Boolean(points <= 0);
+
   return (
     <div className="game-container">
       {gameStatus === "won" && (
@@ -96,7 +98,11 @@ function App() {
       <div className="times-count">
         <span>Time:</span> <span>{(time / 1000).toFixed(1)}s</span>
       </div>
-      <button className="button-restart" onClick={startGame}>
+      <button
+        disabled={disableButton}
+        className="button-restart"
+        onClick={startGame}
+      >
         Restart
       </button>
 
