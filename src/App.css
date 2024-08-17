@@ -1,0 +1,73 @@
+#root {
+  max-width: 1280px;
+  /* margin: 0 auto; */
+  padding: 2rem;
+}
+
+.game-container {
+  /* text-align: center; */
+}
+
+.points-container {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.input-game, .times-count {
+  display: flex;
+  gap: 30px;
+  font-weight: 500;
+  margin: 20px 0;
+
+}
+
+.button-restart {
+  margin-top: 10px;
+  padding: 10px 30px;
+}
+
+.point {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  margin: 5px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 100%;
+  transition: opacity 3s ease-out;
+}
+
+.point.clicked {
+  background-color: red;
+  color: white;
+}
+
+.point.fading {
+  opacity: 0;
+}
+
+
+.status-success {
+  color: green;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.status-gameover {
+  color: red;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.point:hover {
+  background-color: #ddd;
+}
